@@ -1,54 +1,36 @@
  
  <!DOCTYPE html>
  <html lang="en">
- <head>
+    <head>
 
-	 <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <meta name="description" content="">
-	 <title></title>
-	 <link rel="stylesheet" href="CSS/main.css" type="text/css"/>
-     <script src="scripts/slider.js" async></script>
-     <script src="scripts/hammer.min.js" async></script>
-	 <script src="scripts/expand.js" async></script>
-	 <style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <title></title>
+        <link rel="stylesheet" href="CSS/main.css" type="text/css"/>
+        <script src="scripts/slider.js" async></script>
+        <script src="scripts/hammer.min.js" async></script>
+        <script src="scripts/expand.js" async></script>
+    </head>
 
-#lu-header-innercontainer{
+  <body>
+      <div id="mfz-header-container">   
+          <div id="mfz-header-innercontainer">
+              <ul>
+                  <li>About</li>
+                  <li>Companies</li>
+                  <li>Locations</li>
+                  <li>Careers</li>
+                  <li>Contact</li>
+              </ul>
+              <div id="mfz-burger-container" onclick="Moodieio.Expand('mfz-header-innercontainer');" >
+                    <div><span></span></div>
+                    <div><span></span><span></span></div>
+                    <div><span></span></div>
+                </div>
+            </div>
+        </div>
 
- height: 400px;
- width: 800px;
- background: darkcyan;
- 
-
-}
-
-#lu-burger-container{
-
-    width: 30px;
-
-}
-
-               
-	 </style>
-
-
-
- </head>
-
-  <body >
- 
-  <div id="lu-burger-container" onclick="Moodieio.Expand('lu-header-innercontainer');" >
-      
-    <div><span></span></div>
-    <div><span></span><span></span></div>
-    <div><span></span></div>
-  </div>
-
-  <div id="lu-header-innercontainer">
-
-      <ul>menu here</ul>
-
-  </div>
 
   </body>
  </html>

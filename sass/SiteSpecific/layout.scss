@@ -8,8 +8,43 @@ html,body
     color:$color_text;
 
     font-size: $fontsize;
+    font-family:$font_base;
 }
 
+/*
+* MENU
+*/
+#mfz-header-container{
+    height:60px;
+    width:100%;
+    background-color:#122B3E;
+    position:relative;
+}
+
+#mfz-header-innercontainer{
+    height:60px;
+    width:100%;
+    max-width:$max_width;
+    margin:0 auto;
+
+    
+    ul{
+        display:block;
+        height:60px;
+
+        li{
+            display:inline-block;
+            padding:0 20px;
+            line-height:60px;
+            color:white;
+        }
+    }
+}
+#mfz-burger-container{
+    position:absolute;
+    top:0;
+    right:0;
+}
 
 /*
  * MEDIA QUERIES
