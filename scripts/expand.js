@@ -2,7 +2,7 @@ var Moodieio = Moodieio || {};
 
 Moodieio.Expand = function(eId)
 {
-    console.log("expanding: " + eId);
+    //console.log("expanding: " + eId);
     
     //google analytics event if available
    if(typeof(ga)!== 'undefined' && ga!==null){ console.log("Im here " );

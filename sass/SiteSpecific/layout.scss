@@ -144,6 +144,21 @@ html,body
 /*large tablet and smaller */
 @media (max-width: $breakpoint_tablet_l){
 
+    #mfz-header-container.expanded
+    {
+        background-color:purple;
+        &>#mfz-header-innercontainer{
+            height:100%;
+        }
+    }
+    #mfz-header-innercontainer{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+
+        z-index:5000;
+    }
     #mfz-header-logocontainer{
         width:100%;
     }
