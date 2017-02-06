@@ -25,14 +25,14 @@ html,body
 
 #mfz-header-container
 {
-    @include flex-item(0,0,80px);
+    @include flex-item(0,0,60px);
     width:100%;
-    height:80px;
 
     background-color:$color_accent_dark;
+    overflow:hidden;
 }
 #mfz-header-innercontainer{
-    height:100%;
+    height:60px;
     
     &>div{
         display:inline-block;
@@ -57,6 +57,8 @@ html,body
         list-style: none;
         &>li{
             display:inline-block;
+            padding:0 $spacing;
+            background-color:orange;
         }
     }
 }
@@ -64,8 +66,11 @@ html,body
 #mfz-header-burger-container{
     display:none;
     visibility:hidden;
-    width:80px;
-    height:80px;
+    position:absolute;
+    top:0;
+    right:0;
+    width:60px;
+    height:60px;
     background-color:purple;
 }
 
@@ -132,6 +137,14 @@ html,body
 /*large tablet and smaller */
 @media (max-width: $breakpoint_tablet_l){
 
+    #mfz-header-logocontainer{
+        width:100%;
+    }
+
+    #mfz-header-burger-container{
+        display:inline-block;
+        visibility: visible;
+    }
 }
 /*large tablet only*/
 @media (min-width: $breakpoint_tablet_s) and (max-width: $breakpoint_tablet_l){
