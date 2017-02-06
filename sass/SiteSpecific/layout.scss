@@ -31,6 +31,43 @@ html,body
 
     background-color:$color_accent_dark;
 }
+#mfz-header-innercontainer{
+    height:100%;
+    
+    &>div{
+        display:inline-block;
+        vertical-align:top;
+    }
+}
+
+#mfz-header-logocontainer{
+    display:inline-block;
+    height:100%;
+    width:180px;
+    background-color:grey;
+}
+#mfz-header-menu-container{
+    display:inline-block;
+    height:100%;
+    background-color:red;
+
+    &>ul{
+        padding:0;
+        margin:0;
+        list-style: none;
+        &>li{
+            display:inline-block;
+        }
+    }
+}
+
+#mfz-header-burger-container{
+    display:none;
+    visibility:hidden;
+    width:80px;
+    height:80px;
+    background-color:purple;
+}
 
 #mfz-content-container{
     @include flex-item(1,0,auto);
