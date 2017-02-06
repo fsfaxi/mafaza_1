@@ -36,6 +36,19 @@ html,body
     @include flex-item(1,0,auto);
     background-color:grey;
     width:100%;
+    position:relative;
+}
+
+#mfz-content-innercontainer{
+    background-color:yellow;
+    height:100%;
+    
+}
+
+#mfz-content-slider{
+    width:100%;
+    height:100%;
+    background-color:purple;
 }
 
 #mfz-footer-container
