@@ -11,39 +11,20 @@ html,body
     font-family:$font_base;
 }
 
-/*
-* MENU
-*/
 #mfz-header-container{
-    height:60px;
     width:100%;
-    background-color:#122B3E;
-    position:relative;
+    height:80px;
+
+    background-color:$color_accent_dark;
 }
 
-#mfz-header-innercontainer{
-    height:60px;
-    width:100%;
-    max-width:$max_width;
-    margin:0 auto;
+#mfz-content-container{
 
-    
-    ul{
-        display:block;
-        height:60px;
-
-        li{
-            display:inline-block;
-            padding:0 20px;
-            line-height:60px;
-            color:white;
-        }
-    }
 }
-#mfz-burger-container{
-    position:absolute;
-    top:0;
-    right:0;
+
+#mfz-footer-container
+{
+    background-color:$color_accent_dark;
 }
 
 /*
