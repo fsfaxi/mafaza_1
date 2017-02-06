@@ -45,6 +45,7 @@ html,body
     display:inline-block;
     height:60px;
     width:180px;
+    padding:10px;
 }
 #mfz-header-menu-container{
     display:inline-block;
@@ -158,6 +159,11 @@ html,body
     }
     #mfz-header-logocontainer{
         width:100%;
+        
+        img{
+            display:block;
+            margin:0 auto;
+        }
     }
 
     #mfz-header-burger-container{
