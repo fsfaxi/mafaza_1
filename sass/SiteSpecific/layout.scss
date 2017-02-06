@@ -164,10 +164,28 @@ html,body
             margin:0 auto;
         }
     }
-
     #mfz-header-burger-container{
         display:inline-block;
         visibility: visible;
+    }
+
+    #mfz-header-menu-container{
+        width:100%;
+        &>ul{
+            // width:100%;
+            padding:40px;
+            &>li{
+                width:100%;
+                height:40px;
+                line-height:40px;
+                padding-bottom:$spacing;
+                text-align:center;
+                font-size:1.3rem;
+                font-weight:100;
+                border-bottom:1px solid $color_accent_light;
+            }
+
+        }
     }
 }
 /*large tablet only*/
