@@ -34,7 +34,7 @@ html,body
 #mfz-header-innercontainer{
     height:60px;
     overflow:hidden;
-    
+    background-color:$color_accent_dark;
     @include transition(height 0.5s ease-in-out 0s);
     &>div{
         display:inline-block;
@@ -146,7 +146,6 @@ html,body
     {
         &>#mfz-header-innercontainer{
             height:100%;
-            background-color:$color_accent_dark;
         }
     }
     #mfz-header-innercontainer{
