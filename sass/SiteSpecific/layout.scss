@@ -37,7 +37,7 @@ html,body
     background-color:$color_accent_dark;
     @include transition(height 0.5s ease-in-out 0s);
     &>div{
-        display:inline-block;
+        //display:inline-block;
         vertical-align:top;
     }
 }
@@ -67,7 +67,27 @@ html,body
         }
     }
 }
+#mfz-header-locale-container{
+    display:inline-block;
+    position:absolute;
+    right:0;
+    top:0;
 
+    &>ul{
+        padding:0;
+        margin:0;
+
+        &>li{
+            display:inline-block;
+            width:32px;
+            height:32px;
+            line-height:32px;
+            text-align:center;
+            margin-right:$spacing;
+            background-color:$color_accent_light;
+        }
+    }
+}
 #mfz-header-burger-container{
     display:none;
     visibility:hidden;
@@ -166,6 +186,11 @@ html,body
             margin:0 auto;
         }
     }
+    #mfz-header-locale-container{
+        display:block;
+        margin:0 auto;
+        position:static;
+    }
     #mfz-header-burger-container{
         display:inline-block;
         visibility: visible;
@@ -173,6 +198,7 @@ html,body
 
     #mfz-header-menu-container{
         width:100%;
+        height:auto;
         &>ul{
             // width:100%;
             padding:40px;
