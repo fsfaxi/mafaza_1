@@ -21,6 +21,58 @@
         @include transition(left 0.5s linear 0s);
     }
 
+    #mf-slide-buttons-container{
+
+                   
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 6001;
+        //background-color: palevioletred; 
+        @include flex(column,nowrap,"","","");
+
+        #mf-slide-buttons-margin{
+
+            @include flex-item(1,0,auto);
+
+        }
+
+
+         #mf-slide-buttons-innercontainer {
+             
+              @include flex-item(0,0,auto);
+              height: 50px;
+              width: 100%;
+              margin-top: auto;
+              margin-bottom: auto;
+              //background: lightgreen;     
+              
+
+
+              #mf-slide-leftbutton-container{
+                  button{
+
+                        height: 50px;
+                        width: 50px;
+                        position: absolute;
+                        left:0;
+                     
+                  }
+             }    
+
+           #mf-slide-rightbutton-container{
+                   button{
+
+                        height: 50px;
+                        width: 50px;
+                        position: absolute;
+                        right: 0;
+                   }
+           }        
+              
+         }
+    }
+
     #mf-slide-innercontainer{
 
         height: 100%;
@@ -30,7 +82,7 @@
         @include flex(column,nowrap,"","","");
 
 
-        #mf-slide-margin {
+        .mf-slide-margin {
 
             @include flex-item(2,0,auto);
 
@@ -39,17 +91,22 @@
         #mf-slide-headerlogo-container{
 
             @include flex-item(1,0,auto);
-         text-align: center;
+            text-align: center;
             @include flex(column,nowrap,"","","");
             
             
+            
             #mf-slide-headerlogo-innercontainer{
-                @include flex-item(1,0,100%); 
+            
+              @include flex-item(1,0,100%);
               @include flex(column,nowrap,space-around,"","");
-                
+              
+            
 
-                #mf-slide-header-container{
-                        @include flex-item(1,0,0); 
+              #mf-slide-header-container{
+                      
+                      @include flex-item(1,0,0);
+                      
                       header{
                                               
                             font-size:9rem; 
@@ -59,21 +116,20 @@
                
                #mf-slide-logo-container{
                     @include flex-item(1,0,0);                  
-                  width: 170px;
+                    width: 170px;
                     height: 74px;
                     display: block; 
                     margin: 0 auto;
                     img { 
-                                
-                                 
-                                height: 100%;
-                                width: 100%;
+                                            
+                        height: 100%;
+                        width: 100%;
                                
                     }
                }
             }
 
-        }
+       }
 
     
 
