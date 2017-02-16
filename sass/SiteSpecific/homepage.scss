@@ -21,6 +21,56 @@
         @include transition(left 0.5s linear 0s);
     }
 
+    #mf-slide-innercontainer{
+
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 6000;
+        @include flex(column,nowrap,"","","");
+
+
+        #mf-slide-margin {
+
+            @include flex-item(1,0,auto);
+            background-color: lightskyblue;
+
+        }
+
+        #mf-slide-headerlogo-container{
+
+            @include flex-item(1,0,auto);
+            background-color: lightgreen;
+            text-align: center;
+            @include flex(column,nowrap,"","","");
+            
+            
+            #mf-slide-headerlogo-innercontainer{
+                @include flex-item(1,0,auto); 
+                background-color:darkred; 
+                
+
+
+                header{
+                     line-height: 100%;
+                     font-size:10rem;  
+                     
+                     height: 100%; 
+               }
+              
+               img { 
+                        display: block; 
+                        margin: 0 auto; 
+               }
+            }
+
+        }
+
+    
+
+
+    }
+
     .slide{
         display:inline-block;
         position:absolute;
