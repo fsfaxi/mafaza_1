@@ -32,35 +32,44 @@
 
         #mf-slide-margin {
 
-            @include flex-item(1,0,auto);
-            background-color: lightskyblue;
+            @include flex-item(2,0,auto);
 
         }
 
         #mf-slide-headerlogo-container{
 
             @include flex-item(1,0,auto);
-            background-color: lightgreen;
-            text-align: center;
+         text-align: center;
             @include flex(column,nowrap,"","","");
             
             
             #mf-slide-headerlogo-innercontainer{
-                @include flex-item(1,0,auto); 
-                background-color:darkred; 
+                @include flex-item(1,0,100%); 
+              @include flex(column,nowrap,space-around,"","");
                 
 
+                #mf-slide-header-container{
+                        @include flex-item(1,0,0); 
+                      header{
+                                              
+                            font-size:9rem; 
 
-                header{
-                     line-height: 100%;
-                     font-size:10rem;  
-                     
-                     height: 100%; 
+                    }
                }
-              
-               img { 
-                        display: block; 
-                        margin: 0 auto; 
+               
+               #mf-slide-logo-container{
+                    @include flex-item(1,0,0);                  
+                  width: 170px;
+                    height: 74px;
+                    display: block; 
+                    margin: 0 auto;
+                    img { 
+                                
+                                 
+                                height: 100%;
+                                width: 100%;
+                               
+                    }
                }
             }
 
