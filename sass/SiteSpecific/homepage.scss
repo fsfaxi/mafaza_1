@@ -84,11 +84,16 @@
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
+.mfz-slide-logo{
+    @include flex-item(0,0,40px);
+    
+    height:40px;
+}
 .mfz-logo-container{
     height:40px;
-    width:100%;
     position:absolute;
     bottom:$unit;
+    background-color: red;
     img{
         display:block;
         height:100%;
@@ -120,7 +125,7 @@
         &.current{
             &>.status-inner{
                 width:100%;
-                @include transition(width 5s linear 0s);
+                @include transition(width 7s linear 0s);
 
             }
         }

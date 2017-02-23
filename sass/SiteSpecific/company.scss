@@ -1,0 +1,153 @@
+#mfz-cm-headline-container{
+
+    height: 600px;
+    background-color: cornflowerblue;
+    text-align: center;
+    font-size:0;
+    h3{
+        font-size:$fontsize_h3;
+    }
+
+    &::before,
+    &::after{
+        content:"";
+        display:inline-block;
+        width:1%;
+        height:100%;
+        vertical-align: middle;
+    }
+}
+
+#mfz-cm-headline-innercontainer{
+    display:inline-block;
+    vertical-align: middle;
+    //background-color: greenyellow;
+    width: 98%;
+    max-width:800px;
+    font-size:$fontsize;
+
+    &>p{
+
+        padding-top:30px;
+    }
+}
+
+#mfz-cm-headline-logo-container{
+
+    width: 100%;
+    height: 60px;
+    text-align: center;
+}
+
+
+#mfz-cm-brands-container{
+
+    background-color: blueviolet;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+#mfz-cm-brands-logos-container{
+
+    display: inline-block;
+    height: 80px;
+    margin: $spacing auto ;
+    //background-color: lightgreen;
+    
+}
+
+.mfz-cm-brands-logo-container{
+    display:inline-block;
+    height:100%;
+    min-width:120px;
+    margin:0 $spacing;
+    background-color: palevioletred;
+}
+
+#mfz-cm-about-container{
+
+    background-color: darkblue;
+    padding:units2pixels(2) $unit;
+}
+#mfz-cm-about-text{
+    width: 100%;
+    max-width: 800px;
+    margin: $spacing auto;
+}
+
+
+#mfz-cm-brands-container > h3,
+#mfz-cm-contact-container > h3{
+    text-align:center;
+}
+#mfz-cm-about-container > h3{
+    width:100%;
+    max-width:800px;
+    margin:0 auto;
+}
+
+#mfz-cm-contact-container{
+
+    background-color: lightgreen;
+    font-size: 0px;
+    padding:units2pixels(2) $unit;
+
+    a{
+        text-decoration: none;
+        color:inherit;
+    }
+}
+
+#mfz-cm-contact-innercontainer{
+
+    max-width: 640px;
+    margin: 0  auto;
+    padding: $spacing 0;
+
+}
+.mfz-cm-contact-sub-container{
+
+    display: inline-block;
+    height: 200px;
+    width: 50%;
+    max-width:320px;
+    //background-color: lightskyblue;
+    font-size: $fontsize;
+    //border : solid 0.5px; 
+
+}
+
+.mfz-cm-contact-info-row{
+
+    height: $unit;
+    width: 100%;
+    margin-bottom: $spacing;
+    //background: red;
+}
+.mfz-cm-contact-row-icon{
+    display:inline-block;
+    height: 100%;
+    width: $unit;
+    background-color: lightyellow;
+    margin-right: $spacing;
+}
+
+.mfz-cm-contact-row-text{
+    display:inline-block;
+    line-height: $unit;
+    font-size:$fontsize_l;
+}
+
+#mfz-cm-contact-map{
+
+    background-color: deepskyblue;
+}
+
+.mfz-background-cover {
+
+    background-position: center center; 
+    background-size: cover; 
+    background-repeat:no-repeat
+
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<title></title>
+		<link rel="stylesheet" href="CSS/main.css" type="text/css"/>
+		<script src="scripts/slider.js" async></script>
+		<script src="scripts/hammer.min.js" async></script>
+		<script src="scripts/expand.js" async></script>
+		
+
+
+
+                   
+
+	</head>
+	<body>
+		<header id="mfz-header-container">
+			<div id="mfz-header-innercontainer">
+				<div id="mfz-header-logocontainer">
+					<img src="/media/layout/logo-inverse.png" alt="Mafaza Logo">
+				</div>
+				<div id="mfz-header-menu-container">
+					<ul>
+						<li>
+							<a href="#">Home</a>
+							<ul>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Companies</a>
+									<ul>
+										<li>AlMutmaina</li>
+										<li>Carsus</li>
+										<li>Mafaza North Africa</li>
+										<li>Mafaza Petrochemicals</li>
+										<li>Mafaza Renewable Energy</li>
+										<li>Oscon Constrcution</li>
+										<li>Oscon Ltd</li>
+										<li>Salka Shipping Solutions</li>
+									</ul>
+								</li>
+								<li><a href="#">Locations</a>
+									<ul>
+										<li>Tripoli</li>
+										<li>Misurata</li>
+										<li>Benghazi</li>
+										<li>Malta</li>
+									</ul>
+								</li>
+								<li><a href="#">Careers</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div id="mfz-header-locale-container">
+					<ul>
+						<li>EN</li>
+						<li>AR</li>
+					</ul>
+				</div>
+				<div id="mfz-header-burger-container"  onclick="Moodieio.Expand('mfz-header-container')">
+					<div><span></span></div>
+					<div><span></span><span></span></div>
+					<div><span></span></div>
+				</div>
+			</div>
+		</header>
+		<main id="mfz-content-container">
+			<section id="mfz-cm-headline-container">
+				<div id="mfz-cm-headline-innercontainer">
+					<div id="mfz-cm-headline-logo-container">
+						<img src="\Media\layout\logo-inverse.png" alt="Logo" >
+					</div>
+					<p id="mfz-mfz-cm-headline-text">
+						Company headling text.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+					</p>
+				</div>
+			</section>
+			<section id="mfz-cm-brands-container">
+				<h3>Brands</h3>
+				<div id="mfz-cm-brands-logos-container">
+					<div class="mfz-cm-brands-logo-container">1</div>
+					<div class="mfz-cm-brands-logo-container">2</div>
+					<div class="mfz-cm-brands-logo-container">3</div>
+					<div class="mfz-cm-brands-logo-container">4</div>	
+				</div>	
+			</section>
+			<section id="mfz-cm-about-container">
+				<h3>About</h3>
+				<div id="mfz-cm-about-text-container">
+					<p id ="mfz-cm-about-text">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div>
+			</section>
+			<section id="mfz-cm-contact-container">
+				<h3>Contact</h3>
+
+				<div id="mfz-cm-contact-innercontainer">
+					<div  class="mfz-cm-contact-sub-container">
+						<div class="mfz-cm-contact-info-row">
+							<div class="mfz-cm-contact-row-icon"></div>
+							<span class="mfz-cm-contact-row-text">
+								+218 21 490 1171
+							</span>
+						</div>
+						<div class="mfz-cm-contact-info-row">
+							<div class="mfz-cm-contact-row-icon"></div>
+							<span class="mfz-cm-contact-row-text">
+								<a href="mailto:info@mafaza.com">info@mafaza.com</a>
+							</span>
+						</div>
+						<div class="mfz-cm-contact-info-row">
+							<div class="mfz-cm-contact-row-icon"></div>
+							<span class="mfz-cm-contact-row-text">
+								<a href="http://www.mafaza.com">http://www.mafaza.com</a>
+							</span>
+						</div>
+
+					</div>
+					<div id="mfz-cm-contact-map"  class="mfz-cm-contact-sub-container">
+				    <!--  AIzaSyAIG-4OerHNnOiKBRMyFqs5KS6bxwu2uBs
+						  AIzaSyAbQI-aXMxu1kHlhDvsS1mBsVAdXqYdt70
+						  tripoli coordinates : 32.8872,13.1913
+					-->
+							<script>
+								function myMap() {
+									var myCenter = new google.maps.LatLng(32.8110821,13.1870945);
+									var mapCanvas = document.getElementById("mfz-cm-contact-map");
+									var mapOptions = {center: myCenter, zoom: 15};
+									var map = new google.maps.Map(mapCanvas, mapOptions);
+									var marker = new google.maps.Marker({position:myCenter});
+									marker.setMap(map);
+								}
+							</script>
+							<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbQI-aXMxu1kHlhDvsS1mBsVAdXqYdt70&callback=myMap"></script>
+					</div>
+				</div>
+				
+			</section>
+
+			
+			
+		</main>
+        
+		<footer id="mfz-footer-container">
+			Copyright &copy; 2017 Mafaza &amp; Co. Ltd
+
+		</footer>
+	</body>
+</html>
+ 
+ 
+ 
+ 
+ 
