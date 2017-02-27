@@ -44,16 +44,18 @@
 
     background-color: blueviolet;
     width: 100%;
-    display: inline-block;
-    text-align: center;
+    //display: inline-block;
+    //text-align: center;
+    height: 200px;        
+
 }
 
 #mfz-cm-brands-logos-container{
 
-    display: inline-block;
+    //display: inline-block;
     height: 80px;
     margin: $spacing auto ;
-    //background-color: lightgreen;
+    background-color: lightgreen;
     
 }
 
@@ -142,6 +144,44 @@
 #mfz-cm-contact-map{
 
     background-color: deepskyblue;
+    height: 200px;
+    width: 50%;
+    max-width:320px;
+    cursor:pointer;
+    
+    &>img{height: 100%; width:100%;}
+}
+
+#mfz-cm-contact-map-container{
+
+    position: fixed;
+    top:0;
+    left: 0;
+    height: calc(100vh - 60px);
+    width: 100%;
+    //z-index: 2000;
+    background-color: greenyellow;
+    margin-top: 60px;
+    visibility: hidden;
+  
+}
+#mfz-cm-contact-map-close{
+
+       color:red;
+       cursor:pointer;
+       position: absolute;
+       right: 0;
+       top: 0;
+       z-index : 2;
+
+}
+
+#mfz-contact-map-innercontainer{
+   
+   height: 100%;
+   width: 100%;
+   background-color: palevioletred;
+
 }
 
 .mfz-background-cover {
@@ -149,5 +189,66 @@
     background-position: center center; 
     background-size: cover; 
     background-repeat:no-repeat
+
+}
+
+/*
+ * MEDIA QUERIES
+*/
+
+/* medium screen and smaller */
+@media (max-width: $breakpoint_screen_m)
+{
+   
+
+}
+/* medium screen only */
+@media (min-width: $breakpoint_screen_s) and (max-width: $breakpoint_screen_m){
+
+}
+
+/* small screen and smaller */
+@media (max-width: $breakpoint_screen_s){
+ 
+
+}
+/* small screen only */
+@media (min-width: $breakpoint_tablet_l) and (max-width: $breakpoint_screen_s){
+
+}
+
+/*large tablet and smaller */
+@media (max-width: $breakpoint_tablet_l)
+{
+
+    .mfz-cm-contact-sub-container{
+
+        width: 100%;
+    }
+    #mfz-cm-contact-map{
+
+        width: 100%;
+    }
+
+
+}
+/*large tablet only*/
+@media (min-width: $breakpoint_tablet_s) and (max-width: $breakpoint_tablet_l){
+
+}
+
+/* small tablet and smaller */
+@media (max-width: $breakpoint_tablet_s){
+
+}
+/* small tablet only */
+@media (min-width: $breakpoint_mobile) and (max-width: $breakpoint_tablet_s){
+
+}
+/* mobile */
+@media (max-width: $breakpoint_mobile )
+{
+    
+
 
 }

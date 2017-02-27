@@ -16,7 +16,7 @@
                    
 
 	</head>
-	<body>
+	<body id="body">
 		<header id="mfz-header-container">
 			<div id="mfz-header-innercontainer">
 				<div id="mfz-header-logocontainer">
@@ -79,13 +79,13 @@
 					</p>
 				</div>
 			</section>
-			<section id="mfz-cm-brands-container">
+			<section id="mfz-cm-brands-container" data-moodieio-slider="center" data-timer=3000>
 				<h3>Brands</h3>
-				<div id="mfz-cm-brands-logos-container">
-					<div class="mfz-cm-brands-logo-container">1</div>
-					<div class="mfz-cm-brands-logo-container">2</div>
-					<div class="mfz-cm-brands-logo-container">3</div>
-					<div class="mfz-cm-brands-logo-container">4</div>	
+				<div id="mfz-cm-brands-logos-container" data-moodieio-slider-container >
+					<div class="mfz-cm-brands-logo-container" data-slide>1</div>
+					<div class="mfz-cm-brands-logo-container" data-slide>2</div>
+					<div class="mfz-cm-brands-logo-container" data-slide>3</div>
+					<div class="mfz-cm-brands-logo-container" data-slide>4</div>	
 				</div>	
 			</section>
 			<section id="mfz-cm-about-container">
@@ -121,25 +121,29 @@
 						</div>
 
 					</div>
-					<div id="mfz-cm-contact-map"  class="mfz-cm-contact-sub-container">
-				    <!--  AIzaSyAIG-4OerHNnOiKBRMyFqs5KS6bxwu2uBs
-						  AIzaSyAbQI-aXMxu1kHlhDvsS1mBsVAdXqYdt70
-						  tripoli coordinates : 32.8872,13.1913
-					-->
-							<script>
-								function myMap() {
-									var myCenter = new google.maps.LatLng(32.8110821,13.1870945);
-									var mapCanvas = document.getElementById("mfz-cm-contact-map");
-									var mapOptions = {center: myCenter, zoom: 15};
-									var map = new google.maps.Map(mapCanvas, mapOptions);
-									var marker = new google.maps.Marker({position:myCenter});
-									marker.setMap(map);
-								}
-							</script>
-							<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbQI-aXMxu1kHlhDvsS1mBsVAdXqYdt70&callback=myMap"></script>
+					<div id="mfz-cm-contact-map"  class="mfz-cm-contact-sub-container" onclick="document.getElementById('mfz-cm-contact-map-container').style.visibility = 'visible';window.scrollTo(0,0);document.getElementById('body').style.overflow = 'hidden';">
+						<img src="/media/map.png" alt="Map Img" style="background-size: contain;">
+
 					</div>
 				</div>
 				
+			</section>
+			<section id="mfz-cm-contact-map-container">
+				<div id="mfz-cm-contact-map-close" onclick="document.getElementById('mfz-cm-contact-map-container').style.visibility = 'hidden';document.getElementById('body').style.overflow = 'visible';">X</div>
+				<div id="mfz-contact-map-innercontainer">
+					<script>
+						function myMap() {
+							var myCenter = new google.maps.LatLng(32.8110821,13.1870945);
+							var mapCanvas = document.getElementById("mfz-contact-map-innercontainer");
+							var mapOptions = {center: myCenter, zoom: 15};
+							var map = new google.maps.Map(mapCanvas, mapOptions);
+							var marker = new google.maps.Marker({position:myCenter});
+							marker.setMap(map);
+						}
+					</script>
+					<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbQI-aXMxu1kHlhDvsS1mBsVAdXqYdt70&callback=myMap"></script>
+
+				</div>
 			</section>
 
 			
