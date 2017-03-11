@@ -9,6 +9,8 @@
 		<script src="scripts/slider.js" async></script>
 		<script src="scripts/hammer.min.js" async></script>
 		<script src="scripts/expand.js" async></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbQI-aXMxu1kHlhDvsS1mBsVAdXqYdt70&"></script>
+		<script src="scripts/map.js" async></script>
 		
 
 
@@ -79,13 +81,26 @@
 					</p>
 				</div>
 			</section>
-			<section id="mfz-cm-brands-container" data-moodieio-slider="center" data-timer=3000>
-				<h3>Brands</h3>
-				<div id="mfz-cm-brands-logos-container" data-moodieio-slider-container >
-					<div class="mfz-cm-brands-logo-container" data-slide>1</div>
-					<div class="mfz-cm-brands-logo-container" data-slide>2</div>
-					<div class="mfz-cm-brands-logo-container" data-slide>3</div>
-					<div class="mfz-cm-brands-logo-container" data-slide>4</div>	
+			<section class="mfz-cm-brands-container" >
+				<h3>Distributors Of</h3>
+				<div class="mfz-cm-brands-logos-container" data-moodieio-slider="center" data-timer=0  >
+					<div class="mfz-cm-brands-logos-innercontainer" data-moodieio-slider-container>
+						<div class="mfz-cm-brands-logo-container" data-slide>1</div>
+						<div class="mfz-cm-brands-logo-container" data-slide>2</div>
+						<div class="mfz-cm-brands-logo-container" data-slide>3</div>
+						<div class="mfz-cm-brands-logo-container" data-slide>4</div>
+					</div>	
+				</div>	
+			</section>
+			<section class="mfz-cm-brands-container" >
+				<h3>Partner</h3>
+				<div class="mfz-cm-brands-logos-container" data-moodieio-slider="center" data-timer=0  >
+					<div class="mfz-cm-brands-logos-innercontainer" data-moodieio-slider-container>
+						<div class="mfz-cm-brands-logo-container" data-slide>1</div>
+						<div class="mfz-cm-brands-logo-container" data-slide>2</div>
+						<div class="mfz-cm-brands-logo-container" data-slide>3</div>
+						<div class="mfz-cm-brands-logo-container" data-slide>4</div>
+					</div>	
 				</div>	
 			</section>
 			<section id="mfz-cm-about-container">
@@ -121,29 +136,16 @@
 						</div>
 
 					</div>
-					<div id="mfz-cm-contact-map"  class="mfz-cm-contact-sub-container" onclick="document.getElementById('mfz-cm-contact-map-container').style.visibility = 'visible';window.scrollTo(0,0);document.getElementById('body').style.overflow = 'hidden';">
+					<div id="mfz-cm-contact-map"  class="mfz-cm-contact-sub-container" data-map-img >
 						<img src="/media/map.png" alt="Map Img" style="background-size: contain;">
 
 					</div>
 				</div>
 				
 			</section>
-			<section id="mfz-cm-contact-map-container">
-				<div id="mfz-cm-contact-map-close" onclick="document.getElementById('mfz-cm-contact-map-container').style.visibility = 'hidden';document.getElementById('body').style.overflow = 'visible';">X</div>
-				<div id="mfz-contact-map-innercontainer">
-					<script>
-						function myMap() {
-							var myCenter = new google.maps.LatLng(32.8110821,13.1870945);
-							var mapCanvas = document.getElementById("mfz-contact-map-innercontainer");
-							var mapOptions = {center: myCenter, zoom: 15};
-							var map = new google.maps.Map(mapCanvas, mapOptions);
-							var marker = new google.maps.Marker({position:myCenter});
-							marker.setMap(map);
-						}
-					</script>
-					<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbQI-aXMxu1kHlhDvsS1mBsVAdXqYdt70&callback=myMap"></script>
-
-				</div>
+			<section id="mfz-cm-contact-map-container" data-map-container >
+				<div id="mfz-cm-contact-map-close" data-map-close >X</div>
+				<div id="mfz-contact-map-innercontainer" data-map data-map-lat="32.8110821" data-map-lng="13.1870945"></div>
 			</section>
 
 			
@@ -156,8 +158,3 @@
 		</footer>
 	</body>
 </html>
- 
- 
- 
- 
- 

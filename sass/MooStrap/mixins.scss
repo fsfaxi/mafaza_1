@@ -197,14 +197,19 @@
         $basis: units2pixels($basis);
     }
     }
-    -moz-box-flex: $grow;
-    -webkit-box-flex:$grow;
+
+    @include flex-item-grow($grow);
     -ms-flex:$grow $shrink $basis;
 	-webkit-flex: $grow $shrink $basis;
     -moz-flex: $grow $shrink $basis;
     flex: $grow $shrink $basis;
 }
 
+@mixin flex-item-grow($grow){
+    -moz-box-flex: $grow;
+    -webkit-box-flex:$grow;
+    flex-grow:$grow;
+}
 
 
 /* Transitions */

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<title></title>
+		<link rel="stylesheet" href="CSS/main.css" type="text/css"/>
+		<script src="scripts/slider.js" async></script>
+		<script src="scripts/hammer.min.js" async></script>
+		<script src="scripts/expand.js" async></script>
+		
+	<script>
+		// Create the XHR object.
+			function createCORSRequest(method, url) {
+				var xhr = new XMLHttpRequest();
+				if ("withCredentials" in xhr) {
+					// XHR for Chrome/Firefox/Opera/Safari.
+					xhr.open(method, url, true);
+				} else if (typeof XDomainRequest != "undefined") {
+					// XDomainRequest for IE.
+					xhr = new XDomainRequest();
+					xhr.open(method, url);
+				} else {
+					// CORS not supported.
+					xhr = null;
+				}
+				return xhr;
+			}
+
+			// Helper method to parse the title tag from the response.
+			function getTitle(text) {
+				return text.match('<title>(.*)?</title>')[1];
+			}
+
+			// Make the actual CORS request.
+			function makeCorsRequest() {
+			// This is a sample server that supports CORS.
+			var url = 'http://html5rocks-cors.s3-website-us-east-1.amazonaws.com/index.html';
+
+			var xhr = createCORSRequest('GET', url);
+			if (!xhr) {
+				alert('CORS not supported');
+				return;
+			}
+
+			// Response handlers.
+			xhr.onload = function() {
+				var text = xhr.responseText;
+				var title = getTitle(text);
+				alert('Response from CORS request to ' + url + ': ' + title);
+			};
+
+			xhr.onerror = function() {
+				alert('Woops, there was an error making the request.');
+			};
+
+			// JSON message goes here
+			var requestBody = {"name":"jhon","age":"30"};
+			var bodyJSON=JSON.stringify(requestBody);
+			xhr.send(bodyJSON);
+			}
+			makeCorsRequest();
+	
+	</script>				
+
+
+                   
+
+	</head>
+	<body id="body">
+		<header id="mfz-header-container">
+			<div id="mfz-header-innercontainer">
+				<div id="mfz-header-logocontainer">
+					<img src="/media/layout/logo-inverse.png" alt="Mafaza Logo">
+				</div>
+				<div id="mfz-header-menu-container">
+					<ul>
+						<li>
+							<a href="#">Home</a>
+							<ul>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Companies</a>
+									<ul>
+										<li>AlMutmaina</li>
+										<li>Carsus</li>
+										<li>Mafaza North Africa</li>
+										<li>Mafaza Petrochemicals</li>
+										<li>Mafaza Renewable Energy</li>
+										<li>Oscon Constrcution</li>
+										<li>Oscon Ltd</li>
+										<li>Salka Shipping Solutions</li>
+									</ul>
+								</li>
+								<li><a href="#">Locations</a>
+									<ul>
+										<li>Tripoli</li>
+										<li>Misurata</li>
+										<li>Benghazi</li>
+										<li>Malta</li>
+									</ul>
+								</li>
+								<li><a href="#">Careers</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div id="mfz-header-locale-container">
+					<ul>
+						<li>EN</li>
+						<li>AR</li>
+					</ul>
+				</div>
+				<div id="mfz-header-burger-container"  onclick="Moodieio.Expand('mfz-header-container')">
+					<div><span></span></div>
+					<div><span></span><span></span></div>
+					<div><span></span></div>
+				</div>
+			</div>
+		</header>
+		<main id="mfz-content-container">
+			<section id="mfz-ct-contact">
+				<h2>Contact</h2>
+				<span>Please fill out the form below and we will get in touch as soon as possible. We aim to reply to all queries within 48 hours however please note this is not always possible.</span>
+				<form id="mfz-ct-form-container">
+					<input-section>
+						<input-row>
+							<input-set>
+								<label for="Full-Name">Full Name *</label>
+								<input type="text" id="Full-Name" placeholder="John Doe">
+							</input-set>
+						</input-row>
+						<input-row>
+							<input-set>
+								<label for="Telephone">Telephone</label>
+								<input type="tel" id="Telephone" name="telephone" placeholder="+218 21 490 1171">
+							</input-set>
+						</input-row>
+						<input-row>
+							<input-set>
+								<label for="Email">E-Mail</label>
+								<input id="Email" name="email" type="email" placeholder="john@doe.com">
+							</input-set>
+						</input-row>
+						<input-row>
+							<input-set>
+								<label for="Company">Company</label>
+								<input type="text" id="Company" name="comapny" placeholder="Your Company Name">	
+							</input-set>
+						</input-row>
+						<input-row>
+							<input-set>
+								<label for="Message">Message *</label>
+								<textarea name="Message" id="Message" cols="30" rows="10" placeholder="Please enter your message">
+								</textarea>
+							</input-set>
+						</input-row>
+
+					</input-section>
+					<input-section>
+						<input-row>
+							<input-set>
+								<input type="button" value="Submit">
+							</input-set>
+						</input-row>
+					</input-section>
+
+				</form>
+			</section>
+			
+
+			
+			
+		</main>
+        
+		<footer id="mfz-footer-container">
+			Copyright &copy; 2017 Mafaza &amp; Co. Ltd
+
+		</footer>
+	</body>
+</html>
+ 
+ 
+ 
+ 
+ 

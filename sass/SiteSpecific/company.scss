@@ -40,31 +40,41 @@
 }
 
 
-#mfz-cm-brands-container{
+.mfz-cm-brands-container{
 
     background-color: blueviolet;
     width: 100%;
     //display: inline-block;
     //text-align: center;
     height: 200px;        
+    padding:$unit 0;
 
 }
 
-#mfz-cm-brands-logos-container{
-
+.mfz-cm-brands-logos-container{
+    position:relative;
     //display: inline-block;
     height: 80px;
     margin: $spacing auto ;
     background-color: lightgreen;
+    overflow:hidden;
     
 }
-
+.mfz-cm-brands-logos-innercontainer{
+    font-size:0;
+    height:100%;
+}
 .mfz-cm-brands-logo-container{
     display:inline-block;
     height:100%;
     min-width:120px;
-    margin:0 $spacing;
+    margin:0 $spacing*2 0 0;
+    vertical-align: middle;
     background-color: palevioletred;
+
+    &:last-child{
+        margin-right:0;
+    }
 }
 
 #mfz-cm-about-container{

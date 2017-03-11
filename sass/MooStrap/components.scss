@@ -7,16 +7,35 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="tel"],
 input[type="button"],
-input[type="submit"]
+input[type="submit"],
+textarea
 {
+    font-family:$font_base;
     border: 1px solid $color_accent_dark;
-    height:$unit;
     border-radius:0;
     padding:0 $spacing;
 }
 
+select,
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="tel"],
+input[type="button"],
+input[type="submit"]
+{
+    line-height:$unit;
+    height:$unit;
+}
+
+input[type="button"]{
+    background-color:$color_highlight;
+}
 textarea{
-    border: 1px solid $color_accent_dark;
+    padding-top:$spacing;
+    padding-bottom:$spacing;
 }
 
 input-section
@@ -32,46 +51,55 @@ input-section
     {
         width:100%;
         min-width:$unit*2;
-        @include flex(row,wrap);
+        @include flex(row, wrap, flex-start, center, center);
+        padding:$spacing 0 0 $spacing;
+
+        font-size:0;
     }
 }
 
 input-group,
 input-set{
-    padding:0 $spacing $spacing 0;
+    @include flex-item(1,0,auto);
+    margin:0 $spacing $spacing 0;
+    padding:0;
 }
 
 input-group
 {
-    @include flex-item(1,0,auto);
-    @include flex(row,wrap);
-
+    @include flex(row, wrap,flex-start,center,center);
+    font-size:0;
     &>input-set{
-        padding:0;
+        margin:0;
+        display:inline-block;
     }
 }
 
 input-set
 {
     //flex-item
-    @include flex-item(1,0,auto);
     min-height: $unit*2;
-    padding:0 $spacing;
+    font-size:$fontsize;
 
     &.xs{
         flex-basis:12.5%;
+        min-width:units2pixels(2);
     }
     &.s{
         flex-basis: 25%;
+        min-width:units2pixels(4);
     }
     &.m{
         flex-basis: 50%;
+        min-width:$min_width;
     }
     &.l{
         flex-basis: 75%;
+        min-width:$min_width;
     }
     &.xl{
         flex-basis: 87.5%;
+        min-width:$min_width;
     }
 
     label{
@@ -87,4 +115,8 @@ input-set
             width:100%;
             border-radius:0;
     }
+}
+
+.nogrow{
+    @include flex-item-grow(0);
 }

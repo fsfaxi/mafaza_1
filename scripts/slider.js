@@ -283,7 +283,7 @@ var Moodieio = Moodieio || {};
         for(var i=0, len=this.els_slides.length; i<len; i++)
         {
             var curStyle = window.getComputedStyle(this.els_slides[i]);
-            conWidth += this.els_slides[i].offsetWidth + parseFloat(curStyle.marginRight);
+            conWidth += this.els_slides[i].offsetWidth + parseFloat(curStyle.marginRight) +parseFloat(curStyle.marginLeft) ;
         }
 
         this.el_innerContainer.style.width = conWidth + "px";
