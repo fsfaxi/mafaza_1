@@ -1,6 +1,6 @@
 
 (function(){
-
+if (document.querySelector("[data-map-container]")){
     var runMap = function (){
 
         var mapContainer = document.querySelector("[data-map-container]");
@@ -35,5 +35,5 @@
          mapImg.addEventListener("click", runMap);
      });
     
-
+}
 })();
