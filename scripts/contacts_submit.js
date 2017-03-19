@@ -1,82 +1,79 @@
 
 
-window.addEventListener("load",function(){
-     if(document.getElementById("mf-ct-form-button-submit"))
-        document.getElementById("mf-ct-form-button-submit").disabled = false;
-});
-
 (function(){
 
         var contact_onload = function(){
 
-                    // Create the XHR object.
-                    function createCORSRequest(method, url) 
-                    {
-                        var xhr = new XMLHttpRequest();
-                        if ("withCredentials" in xhr) {
-                            // XHR for Chrome/Firefox/Opera/Safari.
-                            xhr.open(method, url, true);
-                        } else if (typeof XDomainRequest != "undefined") {
-                            // XDomainRequest for IE.
-                            xhr = new XDomainRequest();
-                            xhr.open(method, url);
-                        } else {
-                            // CORS not supported.
-                            xhr = null;
-                        }
-                        return xhr;
-                    }
 
-                    // Make the actual CORS request.
-                    function makeCorsRequest(jsonObject) 
-                    {
-                        // This is a sample server that supports CORS.
-                        var url = 'http://milllymailer.azurewebsites.net/api/Submit/2';
+                    var el_form = document.getElementById("mf-ct-form-button-submit");
 
-                        var xhr = createCORSRequest('POST', url);
-                        if (!xhr) {
-                            alert('CORS not supported');
-                            return;
-                        }
+                    if(el_form != null){
 
-                        xhr.onerror = function(e) {
-                            console.dir(e);
-                            alert('Woops, there was an error making the request.');
-                        };
+                            // Create the XHR object.
+                            function createCORSRequest(method, url) 
+                            {
+                                var xhr = new XMLHttpRequest();
+                                if ("withCredentials" in xhr) {
+                                    // XHR for Chrome/Firefox/Opera/Safari.
+                                    xhr.open(method, url, true);
+                                } else if (typeof XDomainRequest != "undefined") {
+                                    // XDomainRequest for IE.
+                                    xhr = new XDomainRequest();
+                                    xhr.open(method, url);
+                                } else {
+                                    // CORS not supported.
+                                    xhr = null;
+                                }
+                                return xhr;
+                            }
 
-                        // JSON message goes here
-                        // var requestBody = {"firstName":"firas","surname":"sfaxi","email":"f.sfaxi@almutmaina.com","tel":"+218944013886"};
-                        var bodyJSON=JSON.stringify(jsonObject);
-                        xhr.setRequestHeader(
-                        'Content-Type', 'application/json');
-                        xhr.send(bodyJSON);
-                    }
+                            // Make the actual CORS request.
+                            function makeCorsRequest(jsonObject) 
+                            {
+                                // This is a sample server that supports CORS.
+                                var url = 'http://milllymailer.azurewebsites.net/api/Submit/2';
 
-                    function printFormData (jsonData){
+                                var xhr = createCORSRequest('POST', url);
+                                if (!xhr) {
+                                    alert('CORS not supported');
+                                    return;
+                                }
 
-                        for(var pair of jsonData.entries()) {
-                            console.log(pair[0]+ ', '+ pair[1]); 
-                        }
+                                xhr.onerror = function(e) {
+                                    console.dir(e);
+                                    alert('Woops, there was an error making the request.');
+                                };
 
-                    }
+                                // JSON message goes here
+                                // var requestBody = {"firstName":"firas","surname":"sfaxi","email":"f.sfaxi@almutmaina.com","tel":"+218944013886"};
+                                var bodyJSON=JSON.stringify(jsonObject);
+                                xhr.setRequestHeader(
+                                'Content-Type', 'application/json');
+                                xhr.send(bodyJSON);
+                            }
 
-                    function formDataToJSON (formData){
+                            function printFormData (jsonData){
 
-                        var jsonData = {};
+                                for(var pair of jsonData.entries()) {
+                                    console.log(pair[0]+ ', '+ pair[1]); 
+                                }
 
-                        for(var value of formData.entries()){
+                            }
 
-                            jsonData[value[0]] = value[1];
+                            function formDataToJSON (formData){
 
-                        }
+                                var jsonData = {};
 
-                        console.log(jsonData);
-                        return jsonData;
+                                for(var value of formData.entries()){
 
-                    }
+                                    jsonData[value[0]] = value[1];
 
-                    if(document.getElementById("mfz-ct-form-container")){ 
+                                }
 
+                                console.log(jsonData);
+                                return jsonData;
+
+                            }
 
                             var form = document.getElementById("mfz-ct-form-container");
                             
@@ -86,13 +83,14 @@ window.addEventListener("load",function(){
                                 var formData = new FormData(form);
 
                                 var jsonData = formDataToJSON(formData);
-                                makeCorsRequest(jsonData);
-                                document.getElementById("mf-ct-form-button-submit").disabled = true;
+                                // makeCorsRequest(jsonData);
                                 document.getElementById("mfz-ct-form-container").style.visibility="hidden";
                                 document.getElementById("mfz-ct-title").innerHTML = "We received your email. Thank you";
                                 
                                 });
-                    }
+                           
+
+                    }// if statement end
             }  
 
             window.addEventListener("load", contact_onload); 
