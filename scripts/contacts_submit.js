@@ -88,6 +88,8 @@ window.addEventListener("load",function(){
                                 var jsonData = formDataToJSON(formData);
                                 makeCorsRequest(jsonData);
                                 document.getElementById("mf-ct-form-button-submit").disabled = true;
+                                document.getElementById("mfz-ct-form-container").style.visibility="hidden";
+                                document.getElementById("mfz-ct-title").innerHTML = "We received your email. Thank you";
                                 
                                 });
                     }
