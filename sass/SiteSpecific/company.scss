@@ -90,7 +90,7 @@
 
 
 #mfz-cm-brands-container > h3,
-.mfz-cm-contact-container > h3{
+#mfz-cm-contact-container > h3{
     text-align:center;
 }
 #mfz-cm-about-container > h3{
@@ -99,7 +99,7 @@
     margin:0 auto;
 }
 
-.mfz-cm-contact-container{
+#mfz-cm-contact-container{
 
     background-color: lightgreen;
     font-size: 0px;
@@ -127,6 +127,9 @@
     //background-color: lightskyblue;
     font-size: $fontsize;
     //border : solid 0.5px; 
+    &>h4{
+        padding: 20px 0;
+    }
 
 }
 
@@ -146,23 +149,25 @@
 }
 
 .mfz-cm-contact-row-text{
-    display:inline-block;
+    display: inline;
     line-height: $unit;
     font-size:$fontsize_l;
 }
 
-#mfz-cm-contact-map{
+.mfz-cm-contact-map{
 
     background-color: deepskyblue;
     height: 200px;
     width: 50%;
     max-width:320px;
     cursor:pointer;
+    display: inline-block;
+    margin-top: 50px;
     
     &>img{height: 100%; width:100%;}
 }
 
-#mfz-cm-contact-map-container{
+.mfz-cm-contact-map-container{
 
     position: fixed;
     top:0;
@@ -175,7 +180,7 @@
     visibility: hidden;
   
 }
-#mfz-cm-contact-map-close{
+.mfz-cm-contact-map-close{
 
        color:red;
        font-size: 2rem;
@@ -187,13 +192,13 @@
 
 }
 
-#mfz-contact-map-innercontainer{
+// #mfz-contact-map-innercontainer{
    
-   height: 100%;
-   width: 100%;
-   background-color: palevioletred;
+//    height: 100%;
+//    width: 100%;
+//    background-color: palevioletred;
 
-}
+// }
 
 .mfz-background-cover {
 
