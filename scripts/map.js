@@ -1,28 +1,31 @@
 
 (function(){
-        
-    if (document.querySelector("[data-map-container]")){
-        var runMap = function (){
 
-            var mapContainer = document.querySelector("[data-map-container]");
-            var map = mapContainer.querySelector("[data-map]");
-            var mapClose = mapContainer.querySelector("[data-map-close]");
+        var mapContainer = document.querySelectorAll("[data-map-container]");
+
+        if (mapContainer.length==0){
+            return;
+        }
+   
+        var runMap = function (i){
+            console.log(i);
+            var mapc = mapContainer[i].querySelector("[data-map]");
+            var mapClose = mapContainer[i].querySelector("[data-map-close]");
             var body = document.body;
             
-            mapContainer.style.visibility = 'visible';
+            mapContainer[i].style.visibility = 'visible';
             window.scrollTo(0,0);
             body.style.overflow = 'hidden';
             
-            var myCenter = new google.maps.LatLng(map.dataset.mapLat,map.dataset.mapLng);
-            var mapCanvas = document.getElementById("mfz-contact-map-innercontainer");
+            var myCenter = new google.maps.LatLng(mapc.dataset.mapLat,mapc.dataset.mapLng);
             var mapOptions = {center: myCenter, zoom: 15};
-            var map = new google.maps.Map(mapCanvas, mapOptions);
+            var map = new google.maps.Map(mapc, mapOptions);
             var marker = new google.maps.Marker({position:myCenter});
             marker.setMap(map);
 
             var closeMap = function (){
                 
-                mapContainer.style.visibility = 'hidden';
+                mapContainer[i].style.visibility = 'hidden';
                 body.style.overflow = 'visible';
 
             }
@@ -31,10 +34,29 @@
 
         }
 
-        window.addEventListener("load", function(){
-            var mapImg = document.querySelector("[data-map-img]");
-            mapImg.addEventListener("click", runMap);
-        });
         
-    }
+ 
+            window.addEventListener("load", function(){
+
+                var mapImg = document.querySelectorAll("[data-map-img]");
+
+                for (var k=0; k<mapImg.length; k++){
+                    
+                    (function(k){
+
+                    console.log(k);                    
+                    mapImg[k].addEventListener("click", function(){
+                        runMap(k);
+                    });   
+
+                    })(k);
+
+                }
+
+                 
+
+            });
+
+       
+   
 })();

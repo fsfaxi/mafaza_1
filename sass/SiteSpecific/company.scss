@@ -90,7 +90,7 @@
 
 
 #mfz-cm-brands-container > h3,
-#mfz-cm-contact-container > h3{
+.mfz-cm-contact-container > h3{
     text-align:center;
 }
 #mfz-cm-about-container > h3{
@@ -99,7 +99,7 @@
     margin:0 auto;
 }
 
-#mfz-cm-contact-container{
+.mfz-cm-contact-container{
 
     background-color: lightgreen;
     font-size: 0px;
@@ -111,7 +111,7 @@
     }
 }
 
-#mfz-cm-contact-innercontainer{
+.mfz-cm-contact-innercontainer{
 
     max-width: 640px;
     margin: 0  auto;
@@ -178,6 +178,7 @@
 #mfz-cm-contact-map-close{
 
        color:red;
+       font-size: 2rem;
        cursor:pointer;
        position: absolute;
        right: 0;

@@ -11,6 +11,8 @@
 		<script src="scripts/expand.js" async></script>
 		<script src="scripts/map.js" async></script>
 		<script src="scripts/contacts_submit.js" async></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbQI-aXMxu1kHlhDvsS1mBsVAdXqYdt70&"></script>
+		<script src="scripts/map.js" async></script>
 		
 	
 	</head>
@@ -67,54 +69,105 @@
 		</header>
 		<main id="mfz-content-container">
 			<section id="mfz-ct-contact">
-				<h2>Contact</h2>
-				<span id="mfz-ct-title">Please fill out the form below and we will get in touch as soon as possible. We aim to reply to all queries within 48 hours however please note this is not always possible.</span>
-				<form id="mfz-ct-form-container" method="POST">
-					<input-section>
-						<input-row>
-							<input-set>
-								<label for="Full-Name">Full Name *</label>
-								<input type="text" id="Full-Name"  name="name" placeholder="John Doe">
-							</input-set>
-						</input-row>
-						<input-row>
-							<input-set>
-								<label for="Telephone">Telephone</label>
-								<input type="tel" id="Telephone" name="telephone" placeholder="+218 21 490 1171">
-							</input-set>
-						</input-row>
-						<input-row>
-							<input-set>
-								<label for="Email">E-Mail</label>
-								<input id="Email" name="email" type="email" placeholder="john@doe.com">
-							</input-set>
-						</input-row>
-						<input-row>
-							<input-set>
-								<label for="Company">Company</label>
-								<input type="text" id="Company" name="company" placeholder="Your Company Name">	
-							</input-set>
-						</input-row>
-						<input-row>
-							<input-set>
-								<label for="Message">Message *</label>
-								<textarea name="message" id="Message" cols="30" rows="10" placeholder="Please enter your message">
-								</textarea>
-							</input-set>
-						</input-row>
+				<div id="mfz-ct-contact-header">
+					<h2>Contact</h2>
+					<span id="mfz-ct-title">Please use the form below to get in touch. While we aim to reply to all enquireies within 48 hours please note that this might not always be possible.
+						For enquireiesrelating to specific companies, please note that the fastest way of getting in touch is via the companies general email address or website, the details at which are available on the companies individual page of this website.
+					</span>
+				</div>
+				<div id="mfz-ct-detailsform-container">
 
-					</input-section>
-					<input-section>
-						<input-row>
-							<input-set>
-								<input id="mf-ct-form-button-submit" type="submit">
-							</input-set>
-						</input-row>
-					</input-section>
+					<section id="mfz-ct-form-container">
+						<form id="mfz-ct-form" method="POST">
+								<input-section>
+									<input-row>
+										<input-set>
+											<label for="Full-Name">Full Name *</label>
+											<input type="text" id="Full-Name"  name="name" placeholder="John Doe">
+										</input-set>
+									</input-row>
+									<input-row>
+										<input-set>
+											<label for="Telephone">Telephone</label>
+											<input type="tel" id="Telephone" name="telephone" placeholder="+218 21 490 1171">
+										</input-set>
+									</input-row>
+									<input-row>
+										<input-set>
+											<label for="Email">E-Mail</label>
+											<input id="Email" name="email" type="email" placeholder="john@doe.com">
+										</input-set>
+									</input-row>
+									<input-row>
+										<input-set>
+											<label for="Company">Company</label>
+											<input type="text" id="Company" name="company" placeholder="Your Company Name">	
+										</input-set>
+									</input-row>
+									<input-row>
+										<input-set>
+											<label for="Message">Message *</label>
+											<textarea name="message" id="Message" cols="30" rows="10" placeholder="Please enter your message">
+											</textarea>
+										</input-set>
+									</input-row>
 
-				</form>
+								</input-section>
+								<input-section>
+									<input-row>
+										<input-set>
+											<input id="mf-ct-form-button-submit" type="submit">
+										</input-set>
+									</input-row>
+								</input-section>
+
+						</form>
+					</section>
+					<section id="mf-ct-details-container" >
+						<h3>Contact details</h3>
+						<div id="mfz-ct-details-innercontainer" >
+							<div id="mfz-ct-details-sub-container">
+							<h4>Tripoli</h4>	
+								<div class="mfz-ct-details-info-row">
+									<div class="mfz-ct-details-row-icon"></div>
+									<span class="mfz-ct-details-row-text">
+										+218 21 490 1171
+									</span>
+								</div>
+								<div class="mfz-ct-details-info-row">
+									<div class="mfz-ct-details-row-icon"></div>
+									<span class="mfz-ct-details-row-text">
+										<a href="mailto:info@mafaza.com">info@mafaza.com</a>
+									</span>
+								</div>
+								<div class="mfz-ct-details-info-row">
+									<div class="mfz-ct-details-row-icon"></div>
+									<span class="mfz-ct-details-row-text">
+										<a href="http://www.mafaza.com">http://www.mafaza.com</a>
+									</span>
+								</div>
+								<div class="mfz-ct-details-info-row">
+									<div class="mfz-ct-details-row-icon"></div>
+									<span class="mfz-ct-details-row-text">
+										Hadba Alkhadra, Tripoli, Libya
+									</span>
+								</div>
+
+							</div>
+							<div id="mfz-ct-details-map"  class="mfz-cm-contact-sub-container" data-map-img >
+								<img src="/media/map.png" alt="Map Img" style="background-size: contain;">
+
+							</div>
+							<section id="mfz-cm-contact-map-container" data-map-container >
+								<div id="mfz-cm-contact-map-close" data-map-close >X</div>
+								<div id="mfz-contact-map-innercontainer" data-map data-map-lat="32.8110821" data-map-lng="13.1870945"></div>
+							</section>
+						</div>
+					</section>
+				</div>
+				
 			</section>
-			
+	
 
 			
 			
