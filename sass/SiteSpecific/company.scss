@@ -93,104 +93,14 @@
 #mfz-cm-contact-container > h3{
     text-align:center;
 }
+
 #mfz-cm-about-container > h3{
     width:100%;
     max-width:800px;
     margin:0 auto;
 }
 
-#mfz-cm-contact-container{
 
-    background-color: lightgreen;
-    font-size: 0px;
-    padding:units2pixels(2) $unit;
-
-    a{
-        text-decoration: none;
-        color:inherit;
-    }
-}
-
-.mfz-cm-contact-innercontainer{
-
-    max-width: 640px;
-    margin: 0  auto;
-    padding: $spacing 0;
-
-}
-.mfz-cm-contact-sub-container{
-
-    display: inline-block;
-    height: 200px;
-    width: 50%;
-    max-width:320px;
-    //background-color: lightskyblue;
-    font-size: $fontsize;
-    //border : solid 0.5px; 
-    &>h4{
-        padding: 20px 0;
-    }
-
-}
-
-.mfz-cm-contact-info-row{
-
-    height: $unit;
-    width: 100%;
-    margin-bottom: $spacing;
-    //background: red;
-}
-.mfz-cm-contact-row-icon{
-    display:inline-block;
-    height: 100%;
-    width: $unit;
-    background-color: lightyellow;
-    margin-right: $spacing;
-}
-
-.mfz-cm-contact-row-text{
-    display: inline;
-    line-height: $unit;
-    font-size:$fontsize_l;
-}
-
-.mfz-cm-contact-map{
-
-    background-color: deepskyblue;
-    height: 200px;
-    width: 50%;
-    max-width:320px;
-    cursor:pointer;
-    display: inline-block;
-    margin-top: 50px;
-    
-    &>img{height: 100%; width:100%;}
-}
-
-.mfz-cm-contact-map-container{
-
-    position: fixed;
-    top:0;
-    left: 0;
-    height: calc(100vh - 60px);
-    width: 100%;
-    //z-index: 2000;
-    background-color: greenyellow;
-    margin-top: 60px;
-    visibility: hidden;
-  
-}
-.mfz-cm-contact-map-close{
-
-       color:red;
-       font-size: 2rem;
-       cursor:pointer;
-       position: absolute;
-       right: 0;
-       top: 0;
-       z-index : 2;
-
-}
 
 // #mfz-contact-map-innercontainer{
    
@@ -206,6 +116,18 @@
     background-size: cover; 
     background-repeat:no-repeat
 
+}
+
+#mfz-cm-contact-container{
+
+    background-color: lightgreen;
+    font-size: 0px;
+    padding:units2pixels(2) $unit;
+
+    a{
+        text-decoration: none;
+        color:inherit;
+    }
 }
 
 /*
@@ -236,16 +158,6 @@
 /*large tablet and smaller */
 @media (max-width: $breakpoint_tablet_l)
 {
-
-    .mfz-cm-contact-sub-container{
-
-        width: 100%;
-    }
-    #mfz-cm-contact-map{
-
-        width: 100%;
-    }
-
 
 }
 /*large tablet only*/

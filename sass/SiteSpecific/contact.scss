@@ -42,39 +42,27 @@
     width: auto;
 }
 
-#mf-ct-form-button-submit{
+#mfz-ct-form-button-submit{
     background-color: #0054A6;
     color: white;
 }
 
-#mf-ct-details-container{
+#mfz-ct-details-container{
 
     @include flex-item (0,0,auto);
     width: 450px;
     font-size: 0;
     min-height: 350px;
-    margin: 0 auto;
-    @include flex (column,nowrap,center,"","");
+    @include flex (column,nowrap,center,flex-end,"");
 
-    #mf-ct-details-innercontainer{
-        // @include flex ();
-        background-color: #E1E1E1;
 
-          &>h3 {
-              padding: 20px 10px;
-          }
-        
-    }
 
-  
-
-    .mfz-cm-contact-innercontainer{
+    .mfz-contact-innercontainer{
        
         width: 420px;
-        float: right;
         height: 270px;
 
-        .mfz-cm-contact-sub-container{
+        .mfz-contact-details{
             height: 100%;
             width: 60%;
 
@@ -82,7 +70,7 @@
                 font-size:$fontsize_s;
             }
         }
-        .mfz-cm-contact-map{
+        .mfz-contact-map{
             height: 150px;
             width: 150px;
             float: right;
@@ -92,59 +80,13 @@
     }
     
 }
-// #mfz-ct-details-innercontainer{
- 
-//     width: 420px;
-//     float: right;
-//     height: 270px;
-// }
 
-// #mfz-ct-details-sub-container{
+#mfz-ct-details-innercontainer{
 
-//     display: inline-block;
-//     height: 100%;
-//     width: 60%;
-//     max-width:320px;
-//     //background-color: lightskyblue;
-//     font-size: $fontsize;
-//     //border : solid 0.5px; 
-//     &>h4{
-//         padding: 20px 0;
-//     }
+        background-color: #E1E1E1;
 
-// }
-
-// .mfz-ct-details-info-row{
-
-//     height: $unit;
-//     width: 100%;
-//     margin-bottom: $spacing;
-//     //background: red;
-// }
-
-// .mfz-ct-details-row-text{
-//     display:inline-block;
-//     line-height: $unit;
-//     font-size:$fontsize_s;
-// }
-
-// .mfz-ct-details-row-icon{
-//     display:inline-block;
-//     height: 100%;
-//     width: $unit;
-//     background-color: lightyellow;
-//     margin-right: $spacing;
-// }
-
-// #mfz-ct-details-map{
-//     background-color: deepskyblue;
-//     height: 150px;
-//     width: 150px;
-//     max-width:320px;
-//     cursor:pointer;
-//     float: right;
-//     margin-right: 10px;
-//     margin-top: 50px;
-//     &>img{height: 100%; width:100%;}
-// }
-
+          &>h3 {
+              padding: 20px 10px;
+          }
+        
+    }
