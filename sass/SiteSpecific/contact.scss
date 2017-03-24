@@ -8,7 +8,6 @@
 
     width: 100%;
     max-width: 1200px;
-    min-width: 450px;
     margin: 0 auto;
     background: #FFFFFF;
 }
@@ -59,34 +58,118 @@
 
     .mfz-contact-innercontainer{
        
-        width: 420px;
-        height: 270px;
-
-        .mfz-contact-details{
-            height: 100%;
-            width: 60%;
-
-            .mfz-ct-details-row-text{
-                font-size:$fontsize_s;
-            }
-        }
-        .mfz-contact-map{
-            height: 150px;
-            width: 150px;
-            float: right;
-            margin-right: 10px;
-            
-        }
+        width: 100%;
+        min-height: 270px;
+        padding-left: 20px;
+     
     }
+    .mfz-contact-map-img-container{
+            
+        height: 150px;
+        width: 150px;
+        margin-right: 10px;
+            
+     }
     
+     .mfz-ct-details-row-text{
+         font-size:$fontsize_s;
+     }
+
+     .mfz-contact-details{
+         height: 100%;
+         width: 60%;
+     }
 }
 
 #mfz-ct-details-innercontainer{
 
-        background-color: #E1E1E1;
+    background-color: #E1E1E1;
 
-          &>h3 {
-              padding: 20px 10px;
-          }
-        
+    &>h3 {
+        padding: 20px 10px;
     }
+        
+}
+
+/*
+ * MEDIA QUERIES
+*/
+
+/* medium screen and smaller */
+@media (max-width: $breakpoint_screen_m)
+{
+   
+
+}
+/* medium screen only */
+@media (min-width: $breakpoint_screen_s) and (max-width: $breakpoint_screen_m){
+
+}
+
+/* small screen and smaller */
+@media (max-width: $breakpoint_screen_s){
+ 
+
+
+}
+/* small screen only */
+@media (min-width: $breakpoint_tablet_l) and (max-width: $breakpoint_screen_s){
+
+}
+
+/*large tablet and smaller */
+@media (max-width: $breakpoint_tablet_l)
+{
+    #mfz-ct-detailsform-container {
+        flex-direction: column;
+    }
+    #mfz-ct-details-container{
+        width : 100%;
+        .mfz-contact-innercontainer{
+            padding: $spacing 50px;
+        }
+    }
+    #mfz-ct-details-innercontainer>h3{
+        text-align: center;
+    }
+  
+
+}
+/*large tablet only*/
+@media (min-width: $breakpoint_tablet_s) and (max-width: $breakpoint_tablet_l){
+
+}
+
+/* small tablet and smaller */
+@media (max-width: $breakpoint_tablet_s){
+
+
+
+}
+/* small tablet only */
+@media (min-width: $breakpoint_mobile) and (max-width: $breakpoint_tablet_s){
+
+}
+/* mobile */
+@media (max-width: $breakpoint_mobile )
+{
+    #mfz-ct-details-container{
+
+        .mfz-contact-innercontainer{
+            @include flex (row,wrap);
+            min-height: 270px;
+            &>h3{
+                @include flex-item(0,0,100%);
+            }
+        }
+        .mfz-contact-details{
+            width: 100%;
+            @include flex-item(0,0,100%);
+        }
+        .mfz-contact-map-img-container{
+            margin: 0 auto;
+        }
+    } 
+
+
+}

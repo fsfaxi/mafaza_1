@@ -4,8 +4,11 @@
 .mfz-contact-innercontainer{
 
     max-width: 640px;
-    margin: 0  auto;
+    margin: 15px  auto;
     padding: $spacing 0;
+
+    background-color: lightgray;
+
     &>h4{
         padding: 20px 0;
     }
@@ -14,12 +17,11 @@
 .mfz-contact-details{
 
     display: inline-block;
-    height: 200px;
+    height: 100%;
     width: 50%;
     max-width:320px;
-    //background-color: lightskyblue;
     font-size: $fontsize;
-    //border : solid 0.5px; 
+ 
 
 }
 
@@ -28,7 +30,7 @@
     height: $unit;
     width: 100%;
     margin-bottom: $spacing;
-    //background: red;
+
 }
 .mfz-contact-row-icon{
     display:inline-block;
@@ -44,7 +46,7 @@
     font-size:$fontsize_l;
 }
 
-.mfz-contact-map{
+.mfz-contact-map-img-container{
 
     background-color: deepskyblue;
     height: 200px;
@@ -64,7 +66,6 @@
     left: 0;
     height: calc(100vh - 60px);
     width: 100%;
-    //z-index: 2000;
     background-color: greenyellow;
     margin-top: 60px;
     visibility: hidden;
@@ -80,6 +81,11 @@
        top: 0;
        z-index : 2;
 
+}
+
+.mfz-contact-map{
+    width: 100%;
+    height: 100%;
 }
 
 /*
@@ -110,15 +116,6 @@
 /*large tablet and smaller */
 @media (max-width: $breakpoint_tablet_l)
 {
-
-    .mfz-contact-details{
-
-        width: 100%;
-    }
-    .mfz-contact-map{
-
-        width: 100%;
-    }
 
 
 }
