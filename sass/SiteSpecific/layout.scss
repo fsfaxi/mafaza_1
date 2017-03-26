@@ -183,7 +183,7 @@ h6{font-size:1.1rem;}
 
 #mfz-footer-container
 {
-    height:120px;
+    @include flex-item (1,0,120px);
     background-color:$color_accent_dark;
 
 }
