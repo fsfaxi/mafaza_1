@@ -52,7 +52,6 @@
     position:relative;
     height: 80px;
     margin: $spacing auto ;
-    background-color: lightgreen;
     overflow:hidden;
     
 }
@@ -85,7 +84,7 @@
 }
 
 
-#mfz-cm-brands-container > h3,
+.mfz-cm-brands-container > h3,
 #mfz-cm-contact-container > h3{
     text-align:center;
 }

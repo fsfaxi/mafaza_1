@@ -107,6 +107,7 @@ h6{font-size:1.1rem;}
                         left:0;
                         z-index:5050;
                         background-color:$color_main;
+                        // font-size: $fontsize_s;
 
 
                         &>li{
@@ -294,6 +295,7 @@ h6{font-size:1.1rem;}
                         }
 
                         /* Level 3 - first level dropdown (e.g. individual company page) */
+
                     }  
                 }
             }

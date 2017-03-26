@@ -33,30 +33,21 @@
             mapClose.addEventListener("click", closeMap);
 
         }
-
         
- 
-            window.addEventListener("load", function(){
+        window.addEventListener("load", function(){
 
-                var mapImg = document.querySelectorAll("[data-map-img]");
+            var mapImg = document.querySelectorAll("[data-map-img]");
 
-                for (var k=0; k<mapImg.length; k++){
-                    
-                    (function(k){
+            for (var k=0; k<mapImg.length; k++){
+                
+                (function(k){
 
-                    console.log(k);                    
-                    mapImg[k].addEventListener("click", function(){
-                        runMap(k);
-                    });   
+                console.log(k);                    
+                mapImg[k].addEventListener("click", function(){
+                    runMap(k);
+                });   
 
-                    })(k);
-
-                }
-
-                 
-
-            });
-
-       
-   
+                })(k);
+            }
+        });
 })();
