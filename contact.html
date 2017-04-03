@@ -17,6 +17,7 @@
 	
 	</head>
 	<body id="body">
+
 		<header id="mfz-header-container">
 			<div id="mfz-header-innercontainer">
 				<div id="mfz-header-logocontainer">
@@ -28,8 +29,8 @@
 							<a href="#">Home</a>
 							<ul>
 								<li><a href="#">About</a></li>
-								<li><a href="#">Companies</a>
-									<ul>
+								<li><a href="#" onclick="Moodieio.Expand('mfz-header-menu-companies')">Companies</a>
+									<ul id="mfz-header-menu-companies">
 										<li>AlMutmaina</li>
 										<li>Carsus</li>
 										<li>Mafaza North Africa</li>
@@ -40,8 +41,8 @@
 										<li>Salka Shipping Solutions</li>
 									</ul>
 								</li>
-								<li><a href="#">Locations</a>
-									<ul>
+								<li><a href="#" onclick="Moodieio.Expand('mfz-header-menu-locations')">Locations</a>
+									<ul id="mfz-header-menu-locations">
 										<li>Tripoli</li>
 										<li>Misurata</li>
 										<li>Benghazi</li>
@@ -60,7 +61,7 @@
 						<li>AR</li>
 					</ul>
 				</div>
-				<div id="mfz-header-burger-container"  onclick="Moodieio.Expand('mfz-header-container')">
+				<div id="mfz-header-burger-container"  onclick="Moodieio.Expand('mfz-header-container');Moodieio.Expand('mfz-footer-container');Moodieio.Expand('mfz-content-container');">
 					<div><span></span></div>
 					<div><span></span><span></span></div>
 					<div><span></span></div>
