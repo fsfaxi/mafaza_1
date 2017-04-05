@@ -98,10 +98,8 @@ h6{font-size:1.1rem;}
 
                     /* Level 3 - first level dropdown (e.g. individual company page) */
                     &>ul{
-                        visibility:hidden;
-                        display:none;
-                        height:0;
 
+                        height:0;
                         position:absolute;
                         top:100%;
                         left:0;
@@ -125,6 +123,13 @@ h6{font-size:1.1rem;}
 
         }
     }
+}
+
+.ul-third{
+
+    visibility:hidden;
+    display:none;
+    
 }
 #mfz-header-locale-container{
     display:inline-block;
@@ -231,20 +236,27 @@ h6{font-size:1.1rem;}
     #mfz-header-container.expanded
     {
         &>#mfz-header-innercontainer{
-            min-height:100%;
-            height: auto;
-            position: absolute;
+            height: 100%;
+            position: fixed;
+            overflow: auto;
         }
     }
 
-    #mfz-header-menu-companies.expanded,#mfz-header-menu-locations.expanded{
+    .exp + ul{
+
         display: block;
         visibility: visible;
+            
     }
+
+    // .ul-third{
+    //     display: none;
+    //     visibility: hidden;
+    // }
     
     #mfz-footer-container.expanded,#mfz-content-container.expanded{
 
-        display: none;
+        // display: none;
     }
 
     #mfz-header-innercontainer{
@@ -323,8 +335,8 @@ h6{font-size:1.1rem;}
 
                         /* Level 3 - first level dropdown (e.g. individual company page) */
                         &>ul{
-                            visibility: hidden;
-                            display: none;
+                            // visibility: hidden;
+                            // display: none;
                             position: relative;
                             width: 80%;
                             height: auto;
