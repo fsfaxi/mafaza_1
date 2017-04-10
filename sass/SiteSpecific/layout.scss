@@ -106,7 +106,7 @@ h6{font-size:1.1rem;}
                         z-index:5050;
                         background-color:$color_main;
                         // font-size: $fontsize_s;
-
+                        
 
                         &>li{
                             min-width:100%;
@@ -249,16 +249,6 @@ h6{font-size:1.1rem;}
             
     }
 
-    // .ul-third{
-    //     display: none;
-    //     visibility: hidden;
-    // }
-    
-    #mfz-footer-container.expanded,#mfz-content-container.expanded{
-
-        // display: none;
-    }
-
     #mfz-header-innercontainer{
         position:fixed;
         top:0;
@@ -302,7 +292,7 @@ h6{font-size:1.1rem;}
         font-size:$fontsize_l;
 
         a{
-            height:40px;
+            min-height:40px;
             width:80%;
             line-height:40px;
             margin:0;
@@ -328,15 +318,8 @@ h6{font-size:1.1rem;}
                         line-height:40px;
                         display:block;
 
-                        // &:hover>ul{
-                        //     visibility: hidden;
-                        //     display: none;
-                        // }
-
                         /* Level 3 - first level dropdown (e.g. individual company page) */
                         &>ul{
-                            // visibility: hidden;
-                            // display: none;
                             position: relative;
                             width: 80%;
                             height: auto;
@@ -345,6 +328,10 @@ h6{font-size:1.1rem;}
                                 border-bottom: 1px solid #4b63ae;
                                 background-color: #e1e1e1;
                                 color: #4b63ae;
+                                &>a{
+                                    border-bottom: none;
+                                    width: 95%;
+                                }
                             }
 
 
@@ -355,6 +342,8 @@ h6{font-size:1.1rem;}
         }
     }
 }
+
+
 /*large tablet only*/
 @media (min-width: $breakpoint_tablet_s) and (max-width: $breakpoint_tablet_l){
 
