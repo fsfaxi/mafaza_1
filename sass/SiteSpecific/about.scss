@@ -8,12 +8,12 @@
     height: 600px;
     text-align: center;
     font-size: 0;
-    h3{
-        font-size: $fontsize_h3;
+    h2{
         color: white;
     }
     p{
         color: white;
+        font-size: $fontsize;
     }
 
 
@@ -22,8 +22,6 @@
 
 #mfz-ab-headline-innercontainer{
     
-    font-size:$fontsize;
-    font-family: MyriadWebPro;
     letter-spacing: 0.4px;
     &>p{
 
@@ -34,15 +32,16 @@
 #mfz-ab-whatwedo-container{
     background-color: white;
     width: 100%;
-    height: 420px;
+    height: 370px;
     text-align: center;
     font-size: 0;
-    h4{
-        font-size: $fontsize_h4;
+    h3{
+
         color: #122b3e;
     }
     p{
         color: #454545;
+        font-size: $fontsize;
         
     }
 
@@ -77,6 +76,6 @@
     display:inline-block;
     vertical-align: middle;
     width: 98%;
-    max-width:800px;
+    max-width:$p_width;
 
 }
