@@ -50,7 +50,7 @@ $burger-icon-container: mfz-header-burger-container;
   &:hover{
       div{
           span{
-              background-color:$color_main;
+              background-color:$color_accent_light;
           }
       }
   }
@@ -59,7 +59,7 @@ $burger-icon-container: mfz-header-burger-container;
 ##{$menu_container}.expanded
 {
     ##{$burger-icon-container} > div > span{
-       background-color:$color_main;
+       background-color:$color_accent_light;
     }
     ##{$burger-icon-container} > div:first-child > span:first-child{
         transform:translate(0px, 9px) rotate(135deg);

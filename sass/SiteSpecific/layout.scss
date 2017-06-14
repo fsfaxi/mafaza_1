@@ -112,7 +112,9 @@ p{
                     &:hover>ul{
                         // visibility: visible;
                         // display:block;
-                        height:auto;
+                         height:auto;
+
+
                     }
 
                     /* Level 3 - first level dropdown (e.g. individual company page) */
@@ -132,6 +134,8 @@ p{
                             padding:0 $unit;
                             line-height:30px;
                             border-bottom:1px solid black;
+                            display: inline-block;
+                            white-space: nowrap;
                             
                         }
                     }
@@ -147,7 +151,8 @@ p{
 .ul-third{
 
     visibility:hidden;
-    display:none;
+   display:none; 
+     
     
 }
 #mfz-header-locale-container{
@@ -261,12 +266,15 @@ p{
         }
     }
 
-    .exp + ul{
+    .exp + .ul-third{
 
-        display: block;
+        display: block; 
         visibility: visible;
-            
+        
+        
+           
     }
+
 
     #mfz-header-innercontainer{
         position:fixed;
@@ -336,17 +344,21 @@ p{
                         min-height:40px;
                         line-height:40px;
                         display:block;
+                      
 
                         /* Level 3 - first level dropdown (e.g. individual company page) */
                         &>ul{
                             position: relative;
                             width: 80%;
-                            height: auto;
+                            height: auto; 
                             margin: 0 auto;
                             &>li{
                                 border-bottom: 1px solid #4b63ae;
                                 background-color: #e1e1e1;
                                 color: #4b63ae;
+                                white-space: normal;
+
+                                                               
                                 &>a{
                                     border-bottom: none;
                                     width: 95%;
