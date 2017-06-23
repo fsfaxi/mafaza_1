@@ -108,26 +108,32 @@
 
 #mfz-cm-contact-container{
 
-    background-color: lightgreen;
-    font-size: 0px;
-    padding:units2pixels(2) $unit;
+    height : 600px;
+    width: 100%;
+    @include flex (row,nowrap,"","","");
 
-    @include flex (row,wrap);
-
-    .mfz-contact-innercontainer{
-        // @include flex-item (0,0,50%);
-        padding: 50px;
-    }
-
-    >h3{
-       @include flex-item (0,0,100%); 
-    }
-
-    a{
-        text-decoration: none;
-        color:inherit;
+    >div{
+        height: 100%;
+        
     }
 }
+
+#mfz-cm-contact-map-container{
+
+    width: 100%;
+}
+#mfz-cm-contact-details-container{
+
+    width: 500px;
+    background-color: #E1E1E1;
+
+    >h3{
+        padding: $unit;
+    }
+    
+}
+
+
 
 /*
  * MEDIA QUERIES
@@ -155,40 +161,9 @@
 }
 
 /*large tablet and smaller */
-@media (max-width: $breakpoint_tablet_l)
-{
+@media (max-width: $breakpoint_tablet_l){
 
-    #mfz-cm-contact-container{ 
-
-        width:100%;
-        padding: 75px 0;
-
-        .mfz-contact-innercontainer{
-              @include flex (row,wrap,center);
-              width: 420px;
-              height: 100%;
-              padding: 0 0 20px 0;
-              &>h4{
-                 @include flex-item(0,0,100%);
-              }
-        } 
-        
-        .mfz-contact-details{
-            @include flex-item(0,0,60%);
-        }
-
-        .mfz-contact-map-img-container{
-         
-            @include flex-item(0,0,35%);
-            height: 130px;
-            margin-right: 10px;
-        }
-
-        .mfz-ct-details-row-text{
-             font-size:$fontsize_s;
-         }
-    }
- }
+}
 /*large tablet only*/
 @media (min-width: $breakpoint_tablet_s) and (max-width: $breakpoint_tablet_l){
 
@@ -205,24 +180,6 @@
 /* mobile */
 @media (max-width: $breakpoint_mobile )
 {
-    
-     #mfz-cm-contact-container{
-
-        .mfz-contact-innercontainer{
-            @include flex (row,wrap);
-            // min-height: 270px;
-            &>h3{
-                @include flex-item(0,0,100%);
-            }
-        }
-        .mfz-contact-details{
-            width: 100%;
-            @include flex-item(0,0,100%);
-        }
-        .mfz-contact-map-img-container{
-            margin: 0 auto;
-        }
-    } 
 
 
 }

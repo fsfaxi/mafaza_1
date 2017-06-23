@@ -7,8 +7,8 @@
 #mfz-ct-contact{
 
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    // max-width: 1200px;
+    // margin: 0 auto;
     background: #FFFFFF;
 }
 
@@ -17,6 +17,7 @@
 
     >h2{
         padding: 20px 0;
+        color: black;
     }
     >span{
         margin-left: 20px;
@@ -25,7 +26,7 @@
 
 #mfz-ct-detailsform-container{
     width: 100%;
-    @include flex (row,nowrap,"","","");
+    @include flex (column,nowrap,"","","");
 }
 
 #mfz-ct-form-container{
@@ -38,58 +39,46 @@
 }
 
 #mfz-ct-form{
+
     width: auto;
+
 }
 
 #mfz-ct-form-button-submit{
     background-color: #0054A6;
     color: white;
+
 }
 
 #mfz-ct-details-container{
 
-    @include flex-item (0,0,auto);
-    width: 450px;
-    font-size: 0;
-    min-height: 350px;
-    @include flex (column,nowrap,center,flex-end,"");
+    width: 100%;
+    height: 800px;
+    @include flex (row,nowrap,"","","");
 
-
-
-    .mfz-contact-innercontainer{
-       
-        width: 100%;
-        min-height: 270px;
-        padding-left: 20px;
-     
-    }
-    .mfz-contact-map-img-container{
-            
-        height: 150px;
-        width: 150px;
-        margin-right: 10px;
-            
-     }
-    
-     .mfz-ct-details-row-text{
-         font-size:$fontsize_s;
-     }
-
-     .mfz-contact-details{
-         height: 100%;
-         width: 60%;
-     }
 }
 
-#mfz-ct-details-innercontainer{
+#mfz-ct-contact-map-container{
 
+    width: 100%;
+    height: 100%;
+
+}
+
+#mfz-ct-contact-details-container{
+
+    width: 500px;
+    height: 100%;
     background-color: #E1E1E1;
+    @include flex-item(0,0,500px);
 
-    &>h3 {
-        padding: 20px 10px;
+    >h3{
+        padding: $unit;
     }
-        
+    
 }
+
+
 
 /*
  * MEDIA QUERIES
@@ -120,19 +109,7 @@
 /*large tablet and smaller */
 @media (max-width: $breakpoint_tablet_l)
 {
-    #mfz-ct-detailsform-container {
-        flex-direction: column;
-    }
-    #mfz-ct-details-container{
-        width : 100%;
-        .mfz-contact-innercontainer{
-            padding: $spacing 50px;
-        }
-    }
-    #mfz-ct-details-innercontainer>h3{
-        text-align: center;
-    }
-  
+ 
 
 }
 /*large tablet only*/
@@ -153,23 +130,6 @@
 /* mobile */
 @media (max-width: $breakpoint_mobile )
 {
-    #mfz-ct-details-container{
-
-        .mfz-contact-innercontainer{
-            @include flex (row,wrap);
-            min-height: 270px;
-            &>h3{
-                @include flex-item(0,0,100%);
-            }
-        }
-        .mfz-contact-details{
-            width: 100%;
-            @include flex-item(0,0,100%);
-        }
-        .mfz-contact-map-img-container{
-            margin: 0 auto;
-        }
-    } 
 
 
 }
