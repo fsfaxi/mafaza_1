@@ -79,9 +79,10 @@
     padding:units2pixels(2) units2pixels(4);
     
     color:white;
-    font-size:7rem;
+    font-size:5rem;
     text-align:center;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    font-family: $font_splash;
 }
 
 .mfz-slide-logo{
@@ -110,7 +111,7 @@
     bottom:0;
     left:0;
 
-    background-color:purple;
+    background-color:#DAECF3;
     @include flex(row, nowrap,space-between,center,center);
 
     &>li{
@@ -130,7 +131,7 @@
             }
         }
         &>.status-inner{
-            background-color:green;
+            background-color:#1BA5B8;
             width:0;
             height:100%;
         }

@@ -35,23 +35,26 @@ $color_bg_input: #ffffff;
 
 $color_text: #111111;
 $color_text_inverse:#f1f1f1;
+$color_header: #212121;
+$color_header_inverse:#f1f1f1;
 
 
 /* Fonts */
 $font_base: 'Lato', sans-serif;
-$font_header: "myriad-pro","Myraid Pro",helvetica,sans-serif;
+$font_header: 'Nunito Sans', sans-serif;
+$font_splash: 'Roboto Condensed', sans-serif;//'Nunito Sans', sans-serif;//'Montserrat', sans-serif;
 
 /* font-sizes */
 $fontsize_h1: 2.2rem;
 $fontsize_h2: 2rem;
-$fontsize_h3: 1.5rem;
+$fontsize_h3: 1.8rem;
 $fontsize_h4: 1.3rem;
 $fontsize_h5: 1.2rem;
 $fontsize_h6: 1rem;
 
 $fontsize: 1rem;
 
-$fontsize_xl: 1.4rem;
+$fontsize_xl: 1.3rem;
 $fontsize_l: 1.2rem;
 $fontsize_s:.9rem;
 $fontsize_xs:0.85rem;
