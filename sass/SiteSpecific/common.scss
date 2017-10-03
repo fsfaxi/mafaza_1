@@ -14,14 +14,16 @@
     }
 
 }
-.mfz-contact-details{
+.mfz-contact-details-innercontainer{
 
     display: inline-block;
     height: 100%;
-    width: 50%;
+    width: auto;
     max-width:320px;
     font-size: $fontsize;
- 
+    margin-left: $unit;
+
+
 
 }
 
@@ -31,8 +33,17 @@
     width: 100%;
     margin-bottom: $spacing;
 
+    &:nth-child(4) {
+       
+        &>span:nth-child(3),&>span:nth-child(4){
+            display: block;
+            margin-left: $unit+10px;
+        }
+    }
+ 
+
 }
-.mfz-contact-row-icon{
+.mfz-contact-info-icon{
     display:inline-block;
     height: 100%;
     width: $unit;
@@ -40,10 +51,11 @@
     margin-right: $spacing;
 }
 
-.mfz-contact-row-text{
+.mfz-contact-info-text{
     display: inline;
     line-height: $unit;
     font-size:$fontsize_l;
+ 
 }
 
 .mfz-contact-map-img-container{

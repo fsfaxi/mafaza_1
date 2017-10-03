@@ -15,6 +15,11 @@ html,body
     height:100%;
     min-height:$min_height;
 }
+
+body{
+    @include flex(column,nowrap);
+}
+
 h1{font-size: $fontsize_h1;}
 h2{font-size: $fontsize_h2;}
 h3{font-size: $fontsize_h3;}
