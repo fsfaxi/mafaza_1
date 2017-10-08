@@ -23,6 +23,31 @@
     font-size: $fontsize;
     margin-left: $unit;
 
+    &>div:nth-child(1){
+        & .mfz-contact-info-icon{
+            background-image: url("../Media/Office Phone.png");
+        }
+    }
+
+    &>div:nth-child(2){
+        & .mfz-contact-info-icon{
+           background-image: url("../Media/envelope.png");
+        }
+    }
+
+    &>div:nth-child(3){
+        & .mfz-contact-info-icon{
+            background-image: url("../Media/map2.png");
+        }
+    }
+
+    &>div:nth-child(4){
+        & .mfz-contact-info-icon{
+            background-image: url("../Media/map2.png");
+        }
+    }
+    
+
 
 
 }
@@ -33,7 +58,7 @@
     width: 100%;
     margin-bottom: $spacing;
 
-    &:nth-child(4) {
+    &:nth-child(3) {
        
         &>span:nth-child(3),&>span:nth-child(4){
             display: block;
@@ -47,8 +72,13 @@
     display:inline-block;
     height: 100%;
     width: $unit;
-    background-color: lightyellow;
     margin-right: $spacing;
+
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
 }
 
 .mfz-contact-info-text{
