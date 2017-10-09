@@ -116,11 +116,6 @@
     height : 600px;
     width: 100%;
     @include flex (row,nowrap,"","","");
-
-    >div{
-        height: 100%;
-        
-    }
 }
 
 #mfz-cm-contact-map-container{
@@ -167,6 +162,36 @@
 
 /*large tablet and smaller */
 @media (max-width: $breakpoint_tablet_l){
+
+     #mfz-cm-contact-container{
+
+        width: 100%;
+        height: 800px;
+        @include flex (column,nowrap,"","","");
+
+    }
+
+    #mfz-cm-contact-map-container{
+
+        width: 100%;
+        height: 480px;
+        order:2;
+
+    }
+
+    #mfz-cm-contact-details-container{
+
+        width: 100%;
+        height: auto;
+        background-color: #E1E1E1;
+        order : 1;
+        @include flex-item(0,0,auto);
+
+        >h3{
+            padding: $unit;
+        }
+        
+    }
 
 }
 /*large tablet only*/

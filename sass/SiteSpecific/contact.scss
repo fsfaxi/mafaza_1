@@ -70,7 +70,7 @@
     width: 500px;
     height: 100%;
     background-color: #E1E1E1;
-    @include flex-item(0,0,500px);
+    @include flex-item(0,0,480px);
 
     >h3{
         padding: $unit;
@@ -98,7 +98,9 @@
 /* small screen and smaller */
 @media (max-width: $breakpoint_screen_s){
  
-
+    #mfz-ct-contact-details-container{
+         @include flex-item(0,0,360px); 
+    }
 
 }
 /* small screen only */
@@ -110,6 +112,35 @@
 @media (max-width: $breakpoint_tablet_l)
 {
  
+     #mfz-ct-details-container{
+
+        width: 100%;
+        height: 800px;
+        @include flex (column,nowrap,"","","");
+
+    }
+
+    #mfz-ct-contact-map-container{
+
+        width: 100%;
+        height: 480px;
+        order:2;
+
+    }
+
+    #mfz-ct-contact-details-container{
+
+        width: 100%;
+        height: auto;
+        background-color: #E1E1E1;
+        order : 1;
+        @include flex-item(0,0,auto);
+
+        >h3{
+            padding: $unit;
+        }
+        
+    }
 
 }
 /*large tablet only*/
@@ -119,8 +150,6 @@
 
 /* small tablet and smaller */
 @media (max-width: $breakpoint_tablet_s){
-
-
 
 }
 /* small tablet only */

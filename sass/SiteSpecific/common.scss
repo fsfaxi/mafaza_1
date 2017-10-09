@@ -18,37 +18,21 @@
 
     display: inline-block;
     height: 100%;
-    width: auto;
+    width: 100%;
     max-width:320px;
-    font-size: $fontsize;
+    font-size: 0;
     margin-left: $unit;
+    margin-bottom: $unit;
 
-    &>div:nth-child(1){
-        & .mfz-contact-info-icon{
-            background-image: url("../Media/Office Phone.png");
+    &>div{
+
+        &>div >div{
+            width: 100%;
+            height: 100%;
+            @include flex (row,nowrap,center,center,center);
         }
+           
     }
-
-    &>div:nth-child(2){
-        & .mfz-contact-info-icon{
-           background-image: url("../Media/envelope.png");
-        }
-    }
-
-    &>div:nth-child(3){
-        & .mfz-contact-info-icon{
-            background-image: url("../Media/map2.png");
-        }
-    }
-
-    &>div:nth-child(4){
-        & .mfz-contact-info-icon{
-            background-image: url("../Media/map2.png");
-        }
-    }
-    
-
-
 
 }
 
@@ -59,7 +43,8 @@
     margin-bottom: $spacing;
 
     &:nth-child(3) {
-       
+        
+        height: auto;
         &>span:nth-child(3),&>span:nth-child(4){
             display: block;
             margin-left: $unit+10px;
@@ -82,7 +67,7 @@
 }
 
 .mfz-contact-info-text{
-    display: inline;
+    display: inline-block;
     line-height: $unit;
     font-size:$fontsize_l;
  
@@ -168,6 +153,11 @@
 
 /* small tablet and smaller */
 @media (max-width: $breakpoint_tablet_s){
+
+
+
+
+
 
 }
 /* small tablet only */
